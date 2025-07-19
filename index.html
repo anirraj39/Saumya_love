@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saumya's Love Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hey babe,</h1>
+    <p id="note">Loading today's note...</p>
+  </div>
+
+  <script src="notes.js"></script>
+  <script>
+    const today = new Date();
+    const dayOfYear = Math.floor(
+      (today - new Date(today.getFullYear(), 0, 0)) / 86400000
+    );
+    const noteElement = document.getElementById("note");
+    if (notes.length >= dayOfYear) {
+      noteElement.textContent = notes[dayOfYear - 1];
+    } else {
+      noteElement.textContent = "You're my every day note, always.";
+    }
+  </script>
+</body>
+</html>
